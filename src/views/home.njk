@@ -28,7 +28,7 @@
         <div class="product">
             <div class="cards">
                 {% for item in products %}
-                    {{ product(title=item.title,priceAfterDiscount=item.priceAfterDiscount,price=item.price,imageUrl=item.images[0].imageUrl) }}
+                    {{ product(title=item.title,priceAfterDiscount=item.priceAfterDiscount,price=item.price,imageUrl=item.images[0].imageUrl,slug=item.slug) }}
                 {% endfor %}
             </div>
         </div>

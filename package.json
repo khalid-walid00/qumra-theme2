@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev": "nodemon --ext '*'",
-    "start": "nodemon --ext '*' --exec babel-node"
+    "dev": "nodemon --ext '*'"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",

@@ -1,0 +1,43 @@
+{% extends "layouts/layout.njk" %}
+{% from "common/components/product.njk" import product %}
+{% block title %}متجرك - الصفحة الرئيسية{% endblock %}
+{% block content %}
+
+    <!-- start header_links  -->
+    <div class="header_links ">
+        <div class="links container ">
+            <a href="/">المتجر</a>
+            <a href="./page/refund-policy.html">سياسة الاستبدال و الاسترجاع</a>
+            <a href="./page/shipping-policy.html">سياسة الشحن</a>
+        </div>
+    </div>
+    <!-- End header_links  -->
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/landing.png" alt="" srcset="">
+            </div>
+            <div class="swiper-slide">
+                <img src="images/landing.png" alt="" srcset="">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+    <!-- start Product  -->
+    <div class="container">
+        <div class="headerTitle">
+            <h3> مقترحة لك</h3>
+        </div>
+        
+        <div class="product">
+            <div class="cards">
+                {% for item in products %}
+                    {{ product(title=item.title,priceAfterDiscount=item.priceAfterDiscount,price=item.price,imageUrl=item.images[0].imageUrl) }}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <!-- End Product  -->
+
+{% endblock %}

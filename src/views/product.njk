@@ -1,0 +1,121 @@
+{# 
+  Data Structure:
+  {
+    _id: 'ObjectId',
+    title: 'String',
+    slug: 'String',
+    SKU: 'String',
+    category: {
+        _id: 'ObjectId',
+        title: 'String',
+        icon: 'String',
+        description: 'String',
+        status: 'String',
+        deleted: 'Boolean',
+        createdAt: 'Date',
+        updatedAt: 'Date',
+        __v: 'Number'
+    },
+    subCategory: {
+        _id: 'ObjectId',
+        title: 'String',
+        category: 'ObjectId',
+        icon: 'String',
+        description: 'String',
+        status: 'String',
+        deleted: 'Boolean',
+        createdAt: 'Date',
+        updatedAt: 'Date',
+        __v: 'Number'
+    },
+    price: 'Number',
+    priceAfterDiscount: 'Number',
+    content: 'String',
+    status: 'String',
+    images: [
+        {
+        image: 'String',
+        _id: 'ObjectId',
+        createdAt: 'Date',
+        updatedAt: 'Date',
+        imageUrl: 'String',
+        id: 'ObjectId'
+        }
+    ],
+    properties: [
+        {
+        property: 'Object',
+        values: 'Array',
+        _id: 'ObjectId',
+        createdAt: 'Date',
+        updatedAt: 'Date'
+        }
+    ],
+    pricing: [
+        {
+        title: 'String',
+        quantity: 'Number',
+        price: 'Number',
+        recommended: 'Boolean',
+        freeShipping: 'Boolean',
+        _id: 'ObjectId',
+        createdAt: 'Date',
+        updatedAt: 'Date'
+        }
+    ],
+    user: {
+        _id: 'ObjectId',
+        fullname: 'String',
+        role: 'String',
+        password: 'String',
+        phone: 'String',
+        avatar: 'String',
+        blocked: 'Boolean',
+        verfied: 'Boolean',
+        activated: 'Boolean',
+        deleted: 'Boolean',
+        createdAt: 'Date',
+        updatedAt: 'Date',
+        __v: 'Number',
+        defaultApp: 'ObjectId'
+    },
+    stock: {
+        quantity: 'Number',
+        quantityAlert: 'Number',
+        quantityTracking: 'Boolean',
+        _id: 'ObjectId',
+        createdAt: 'Date',
+        updatedAt: 'Date'
+    },
+    app: {
+        _id: 'ObjectId',
+        name: 'String',
+        type: 'String',
+        user: 'ObjectId',
+        services: 'Array',
+        logo: 'String',
+        description: 'String',
+        secretKey: 'String',
+        interface: 'String',
+        deleted: 'Boolean',
+        createdAt: 'Date',
+        updatedAt: 'Date',
+        __v: 'Number',
+        theme: 'ObjectId',
+        subdomain: 'String',
+        pixels: {
+        facebook: 'String',
+        snapchat: 'String',
+        tiktok: 'String'
+        }
+    },
+    deleted: 'Boolean',
+    createdAt: 'Date',
+    updatedAt: 'Date',
+}
+#}
+
+<p id='test'>{{title}}</p>
+<p id='test'>{{title}}</p>
+<p id='test'>{{title}}</p>
+{{description}}

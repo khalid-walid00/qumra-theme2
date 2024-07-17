@@ -1,0 +1,28 @@
+{
+  "name": "qumra-web",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nodemon --ext '*'",
+    "start": "nodemon --ext '*' --exec babel-node"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "detect-browser": "^5.3.0",
+    "dotenv": "^16.4.5",
+    "express": "~4.16.1",
+    "express-rate-limit": "^7.3.1",
+    "express-useragent": "^1.0.15",
+    "geoip-country": "^4.2.113",
+    "http-errors": "~1.6.3",
+    "jade": "~1.11.0",
+    "mongoose": "^8.5.1",
+    "morgan": "~1.9.1",
+    "nunjucks": "^3.2.4",
+    "qumra-client": "^1.0.15",
+    "referrer-policy": "^1.2.0",
+    "user-agents": "^1.1.265",
+    "uuid": "^10.0.0"
+  }
+}

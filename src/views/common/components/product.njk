@@ -1,0 +1,10 @@
+{% macro product(title, price, priceAfterDiscount, imageUrl) %}
+    <div class="card">
+        <img src="{{imageUrl}}"/>
+        <div>
+            <h5>{{title}}</h5>
+            <span>{{price}}</span>
+            <span>{{priceAfterDiscount}}</span>
+        </div>
+    </div>
+{% endmacro %}

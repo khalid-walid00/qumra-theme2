@@ -15,7 +15,7 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use(cookieParser());
 
-app.set('view engine', 'html');
+app.set('view engine', 'njk');
 
 app.use(express.static(path.join(__dirname, 'views', 'assets')))
 

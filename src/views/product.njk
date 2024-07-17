@@ -1,8 +1,7 @@
 {% extends "layouts/layout.njk" %}
-{% from "common/components/product.njk" import product %}
 {% block title %}متجرك - الصفحة الرئيسية{% endblock %}
 
-{% from "common/components/product.njk" import  productPrice %}
+{% from "common/components/product.njk" import productPrice %}
 {% from "common/components/product/form.njk" import field,textArea,label%}
 {% from "common/components/product/swipper.njk" import swiperContent%}
 {% from "common/components/product/aboutProduct.njk" import aboutProduct%}
@@ -11,70 +10,68 @@
 {% from "common/components/product/offerProduct.njk" import offerProduct%}
 {% block content %}
     <div class="container container-product-responsive">
-            <div class="containerNav swipper-container gap-5 ">
-              
-              
-                <!-- swiper -->
-                <div class="swiper-container w-Swipper">
-                    <div class="swiper mySwiper rounded-lg">
-                        <div class="swiper-wrapper">
-                            {%for item in product.images  %}
-                                {{swiperContent (img=item.imageUrl)}}
-                            {%endfor %}
-                        </div>
-                        <div class="swiper-pagination"></div>
-                        <div class="swiper-button-next controller-swipper"></div>
-                        <div class="swiper-button-prev controller-swipper"></div>
+        <div class="containerNav swipper-container gap-5 ">
 
+            <!-- swiper -->
+            <div class="swiper-container w-Swipper">
+                <div class="swiper mySwiper rounded-lg">
+                    <div class="swiper-wrapper">
+                        {%for item in product.images  %}
+                            {{swiperContent (img=item.imageUrl)}}
+                        {%endfor %}
                     </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-next controller-swipper"></div>
+                    <div class="swiper-button-prev controller-swipper"></div>
+
                 </div>
-                <!-- swiper -->
+            </div>
+            <!-- swiper -->
 
-
-                <div class="flex flex-col item-start flex-1 overFlow-y-auto overFlow-x-hidden custom-scrollbar padding-left"
+            <div class="flex flex-col item-start flex-1 overFlow-y-auto overFlow-x-hidden custom-scrollbar padding-left"
                     style="height: 64vh;">
-                    {{productDetails(title="مغسلة السيارات الالمانية",rateNumbers=5,oldPrice="99",currentPrice="150")}}
+                {{productDetails(title="مغسلة السيارات الالمانية",rateNumbers=5,oldPrice="99",currentPrice="150")}}
 
-                    <div class=" flex item-center w-full justify-between select-Offer mb-1">
-                        {{offerProduct(offerTitle="احصل علي خصم",listItems=["asd","asd","asd"])}}
+                <div class=" flex item-center w-full justify-between select-Offer mb-1">
+                    {{offerProduct(offerTitle="احصل علي خصم",listItems=["asd","asd","asd"])}}
 
-                     <div class=" w-full">
-                    <div
+                    <div class=" w-full">
+                        <div
                         class=" px-3 bg-gridant-blue veiw py-5 px-3  text-white justify-between mt-5">
 
-                        <div class="flex  item-center ">
+                            <div class="flex  item-center ">
 
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="rgb(59 130 246)"
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="rgb(59 130 246)"
                                 aria-hidden="true" class="h-12 w-12 animate-bounce text-blue-500">
-                                <path fill-rule="evenodd"
+                                    <path fill-rule="evenodd"
                                     d="M13.5 4.938a7 7 0 11-9.006 1.737c.202-.257.59-.218.793.039.278.352.594.672.943.954.332.269.786-.049.773-.476a5.977 5.977 0 01.572-2.759 6.026 6.026 0 012.486-2.665c.247-.14.55-.016.677.238A6.967 6.967 0 0013.5 4.938zM14 12a4 4 0 01-4 4c-1.913 0-3.52-1.398-3.91-3.182-.093-.429.44-.643.814-.413a4.043 4.043 0 001.601.564c.303.038.531-.24.51-.544a5.975 5.975 0 011.315-4.192.447.447 0 01.431-.16A4.001 4.001 0 0114 12z"
                                     clip-rule="evenodd"></path>
-                            </svg>
-                            <div class=" font-bold font-base">ينتهي العرض في</div>
+                                </svg>
+                                <div class=" font-bold font-base">ينتهي العرض في</div>
+
+                            </div>
+
+                            <div class="grid grid-columns-4 gap-3">
+                                <div>
+                                    <div class=" text-center font-bold font-base">0</div>
+                                    <div class=" text-center font-base mt-1">ثواني</div>
+                                </div>
+                                <div>
+                                    <div class=" text-center font-bold font-base">0</div>
+                                    <div class=" text-center font-base mt-1">دقائق</div>
+                                </div>
+                                <div>
+                                    <div class=" text-center font-bold font-base">0</div>
+                                    <div class=" text-center font-base mt-1">ساعات</div>
+                                </div>
+                                <div>
+                                    <div class=" text-center font-bold font-base">0</div>
+                                    <div class=" text-center font-base mt-1">ايام</div>
+                                </div>
+                            </div>
 
                         </div>
-
-
-                        <div class="grid grid-columns-4 gap-3">
-                            <div>
-                                <div class=" text-center font-bold font-base">0</div>
-                                <div class=" text-center font-base mt-1">ثواني</div>
-                            </div>
-                            <div>
-                                <div class=" text-center font-bold font-base">0</div>
-                                <div class=" text-center font-base mt-1">دقائق</div>
-                            </div>
-                            <div>
-                                <div class=" text-center font-bold font-base">0</div>
-                                <div class=" text-center font-base mt-1">ساعات</div>
-                            </div>
-                            <div>
-                                <div class=" text-center font-bold font-base">0</div>
-                                <div class=" text-center font-base mt-1">ايام</div>
-                            </div>
-                        </div>
-
-                    </div></div>
+                    </div>
 
                     <div class=" text-red-500 font-base font-bold mt-7 mb-2">
                         فقط متبقي 15 قطعة
@@ -84,55 +81,58 @@
                             <span style="visibility: hidden;">present%</span>
                         </div>
                     </div>
-<!-- veiws -->
+                    <!-- veiws -->
                     <div class="mt-4 font-base font-bold mb-2">يشاهد هذا المنتج الآن <span
                             class="  rounded-md p-1 px-2 trext-sm bg-black text-white">293</span> عميل</div>
-<!-- veiws -->
+                    <!-- veiws -->
 
-<!-- make order -->
+                    <!-- make order -->
                     <div class=" w-full">
                         <button class="btn-order rounded-full w-full  py-3 font-base text-lg">اطلب الان</button>
                     </div>
-<!-- make order -->
+                    <!-- make order -->
 
-<!-- about product -->
+                    <!-- about product -->
                     <div class="mt-10">
 
                         <div class=" font-base text-2xl font-bold">مواصفات المنتج:
                         </div>
                         <ul class="doc-none mt-5 w-11-12">
-                              {% for item in products %}
-                                 {{ aboutProduct(text=item.text) }}
-                              {% endfor %}
-                         
+                            {% for item in products %}
+                                {{ aboutProduct(text=item.text) }}
+                            {% endfor %}
+
                         </ul>
                     </div>
-<!-- about product -->
-                    
+                    <!-- about product -->
 
-<!-- digital -->
+                    <!-- digital -->
                     <div class=" mt-10">
                         <div class=" font-base text-xl font-bold">يرجى ادخال معلوماتك لإكمال الطلب</div>
                         <div class=" font-base text-base mt-5">عدد القطع</div>
                         <div class="grid grid-columns-3 w-5-12 mt-3">
-                            <button class="digital-btn outline-none   rounded-md  w-max"><svg
+                            <button class="digital-btn outline-none   rounded-md  w-max">
+                                <svg
                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                                     aria-hidden="true" class="w-4 cursor-pointer h-4 text-gray-900">
                                     <path fill-rule="evenodd"
                                         d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z"
                                         clip-rule="evenodd"></path>
-                                </svg></button>
+                                </svg>
+                            </button>
                             <div class=" py-3 px-3 rounded-md font-base  w-max">1</div>
-                            <button class="digital-btn outline-none   rounded-md  w-max"><svg
+                            <button class="digital-btn outline-none   rounded-md  w-max">
+                                <svg
                                     xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                                     aria-hidden="true" class="w-4 cursor-pointer h-4 text-gray-900">
                                     <path fill-rule="evenodd"
                                         d="M3.75 12a.75.75 0 01.75-.75h15a.75.75 0 010 1.5h-15a.75.75 0 01-.75-.75z"
                                         clip-rule="evenodd"></path>
-                                </svg></button>
+                                </svg>
+                            </button>
                         </div>
                     </div>
-<!-- digital -->
+                    <!-- digital -->
 
                     <!-- form -->
                     <div class=" mt-4 w-11-5-12">
@@ -140,24 +140,24 @@
                             <div>
                                 {# <label>اسمك بالكامل</label> #}
                                 {# <input type="text" class="input mt-1" placeholder="" required> #}
-                                 {{ label(text='اسمك بالكامل') }}
+                                {{ label(text='اسمك بالكامل') }}
                                 {{ field(name, value='', type='text') }}
-                                 {{ label(text='هذا الحقل مطلوب') }}
-              
+                                {{ label(text='هذا الحقل مطلوب') }}
+
                             </div>
                             <div class="mt-4">
-                                  {{ label(text='رقم الهاتف') }}
+                                {{ label(text='رقم الهاتف') }}
                                 {{ field(name, value='', type='text') }}
-                                 {{ label(text='هذا الحقل مطلوب') }}
+                                {{ label(text='هذا الحقل مطلوب') }}
                             </div>
                             <div class="mt-4">
-                               {{ label(text='العنوان بالتفصيل') }}
+                                {{ label(text='العنوان بالتفصيل') }}
                                 {{ field(name, value='', type='text') }}
-                                 {{ label(text='هذا الحقل مطلوب') }}
+                                {{ label(text='هذا الحقل مطلوب') }}
                             </div>
 
                             <div class="font-base mt-10 font-lg">
-                              {{productPrice(text='fsdf',price='34')}}
+                                {{productPrice(text='fsdf',price='34')}}
                             </div>
 
                             <div class=" w-full mt-10">
@@ -171,7 +171,6 @@
 
                 </div>
 
-
             </div>
 
             <!-- opinion -->
@@ -180,20 +179,20 @@
                     <div class=" font-base text-2xl font-bold">تقييمات المستخدمين</div>
                     <div class="flex gap-3 mt-3">
                         <div class=" grid grid-columns-5 gap-1">
-                            {% for opinion  in opinions%} 
-                            {{opinions}}
-                            {%endfor%}
+                            {% for opinion  in opinions%}
+                                {{opinions}}
+                                {%endfor%}
+                            </div>
+                            <div class=" font-base text-base">لا يوجد تقييمات</div>
                         </div>
-                        <div class=" font-base text-base">لا يوجد تقييمات</div>
-                    </div>
-                    <div class=" font-base text-lg mt-10">شارك تقييمك</div>
-                    <div class="opinios-btn-container mt-6">
-                        <button class="opinios-btn outline-none   rounded-md w-full">تقييم</button>
+                        <div class=" font-base text-lg mt-10">شارك تقييمك</div>
+                        <div class="opinios-btn-container mt-6">
+                            <button class="opinios-btn outline-none   rounded-md w-full">تقييم</button>
+                        </div>
                     </div>
                 </div>
+                <!-- opinion -->
+
             </div>
-            <!-- opinion -->
-
-
- </div>
- {% endblock %}
+            
+        {% endblock %}

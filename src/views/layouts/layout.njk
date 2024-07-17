@@ -14,11 +14,11 @@
 
 <body style="background-color: white" dir="rtl">
     <div class="bodyMain">
-        {% include "components/header.njk" ignore missing %}
+        {% include "common/header.njk" ignore missing %}
         <main>
             {% block content %}{% endblock %}
         </main>
-        {% include "components/footer.njk" ignore missing %}
+        {% include "common/footer.njk" ignore missing %}
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="/js/main.min.js"></script>

@@ -3,6 +3,6 @@ var router = express.Router();
 const { productController } = require('../../controllers');
 
 /* GET home page. */
-router.get('/:slug' , productController);
+router.get('' , productController);
 
 module.exports = router;

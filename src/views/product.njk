@@ -115,13 +115,19 @@
 }
 #}
 {% extends "layouts/layout.njk" %}
-{% from "common/components/forms.njk" import field,label %}
-{% from "common/components/product.njk" import aboutProduct,productPrice ,swiperContent,productDetails,offerProduct%}
+{% from "common/components/product.njk" import  productPrice,offerProduct%}
+{% from "common/components/product/form.njk" import field,textArea,label%}
+{% from "common/components/product/swipper.njk" import swiperContent%}
+{% from "common/components/product/aboutProduct.njk" import aboutProduct%}
+{% from "common/components/product/productPrice.njk" import productPrice%}
+{% from "common/components/product/productDetail.njk" import productDetails%}
 {% block title %} {{product.title}} {% endblock %}
 
 {% block content %}
-  <div class="container container-product-responsive">
+    <div class="container container-product-responsive">
             <div class="containerNav swipper-container gap-5 ">
+              
+              
                 <!-- swiper -->
                 <div class="swiper-container w-Swipper">
                     <div class="swiper mySwiper rounded-lg">
@@ -137,12 +143,14 @@
                     </div>
                 </div>
                 <!-- swiper -->
+
+
                 <div class="flex flex-col item-start flex-1 overFlow-y-auto overFlow-x-hidden custom-scrollbar padding-left"
                     style="height: 64vh;">
-                    {{productDetails(title="",rateNumbers=5,oldPrice="99",currentPrice="150")}}
+                    {{productDetails(title="مغسلة السيارات الالمانية",rateNumbers=5,oldPrice="99",currentPrice="150")}}
 
                     <div class=" flex item-center w-full justify-between select-Offer mb-1">
-                        {{offerProduct(offerTitle,listItems)}}
+                        {{offerProduct(offerTitle="احصل علي خصم",listItems)}}
 
                      <div class=" w-full">
                     <div
@@ -301,15 +309,10 @@
             <!-- opinion -->
 
 
-
-        </div>
-
+ </div>
  {% endblock %}
 
 
 
-<p id='test'>{{title}}</p>
-<p id='test'>{{title}}</p>
-<p id='test'>{{title}}</p>
-{{description}}
+
  {# <script src="./assets/js/product.js"></script> #}

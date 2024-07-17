@@ -8,3 +8,89 @@
         </div>
     </div>
 {% endmacro %}
+
+{# swiper aboutProduct #}
+{% macro aboutProduct(text)%}
+       <li class="mt-1">{{text}}</li>
+{% endmacro %}
+
+
+{# swiper productPrice #}
+{%macro productPrice(text,price="شحن مجاني")%}
+        <div class="flex justify-between mt-3">
+            <div class=" text-gray">{{text}}</div>
+            <div class=" font-bold">{{price}}</div>
+        </div>
+{% endmacro %}
+
+{# swiper mecro #}
+{% macro swiperContent(img)%}
+  <div class="swiper-slide">
+    <img src="{{img}}" alt="" srcset="">
+  </div>
+{%endmacro%}
+
+
+{# opinions mecro  #}
+{%macro opinions(number)%}
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#d1d5db"
+   aria-hidden="true" class="text-gray-300 h-4 w-4 flex-shrink-0">
+       <path fill-rule="evenodd"
+           d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+           clip-rule="evenodd"></path>
+  </svg>
+
+{%endmacro%}
+
+
+{# rate mecro #}
+{% macro productDetails(title,rateNumbers,oldPrice,currentPrice)%}
+
+<h1 class="text-3xl m-title">{{title}}</h1>
+                    <span class="bg-yellow-500 mt-5  text-yellow-500 p-1 rounded-full ">لا يوجد تقييمات بعد
+                        <span class="">
+                            {% for rateNumber  in rateNumbers%} 
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="yellow" aria-hidden="true"
+                                class="h-4 w-4 text-yellow-500">
+                                <path fill-rule="evenodd"
+                                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+                                    clip-rule="evenodd"></path>
+                            </svg> 
+                             {%endfor%}
+                        </span>
+                    </span>
+
+                    <div class="flex item-center m-price  gap-1">
+                        <span>السعر قبل الخصم</span>
+                        <span class="flex item-center gap-1">
+                            <h4 class="line-throw text-gray">{{oldPrice}}</h4><span class="text-xl text-gray">AED</span>
+                        </span>
+                    </div>
+
+                    <div class="flex item-center m-price">
+                        <span>السعر قبل الخصم</span>
+                        <h4 class="  text-3xl">{{currentPrice}}<span class="text-xl text-gray">AED</span></h4>
+                    </div>
+
+{%endmacro%}
+
+{# swiper offer #}
+{%macro offerProduct(offerTitle,listItems)%}
+
+<div class="font-base font-bold">{{offerTitle}}</div>
+                           <div class=" text-gray select-dev w-10-12">
+                            <div class="custom-select-container w-full">
+                                <button class="select-button" id="select-button">
+                                      {{listItems[0]}}
+                                    <span class="arrow">&lt;&gt;</span>
+                                </button>
+                                <ul class="select-dropdown doc-none" id="select-dropdown">
+                                   {%for listitem in listItems%}
+                                    <li>{{listitem}}</li>
+                                   {%endfor%}
+                                </ul>
+                            </div>
+
+                            </div>
+                        </div>
+{%endmacro%}

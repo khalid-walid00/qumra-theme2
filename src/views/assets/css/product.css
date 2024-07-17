@@ -1,0 +1,348 @@
+:root {
+    --color-primary: 38, 101, 38;
+    --gray:#f1f1f1;
+    --color-a11y: 255, 255, 255;
+    --skin-primary: #3498db;
+    --dark-green: #266526;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    color: black !important; 
+    background-color: white !important; 
+    border-radius: 50%; 
+   font-size: 20px !important;
+    display: flex;
+    padding: 0 8px 0;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-button-prev:hover,
+  .swiper-button-next:hover {
+   background-color: black !important;
+   color: white !important;
+  }
+  .swiper-button-prev::after,
+  .swiper-button-next::after {
+    font-family: "swiper-icons"; 
+    font-size: 20px !important; 
+  }
+  
+  .swiper-button-prev {
+    left: 10px;
+  }
+  
+  .swiper-button-next {
+    right: 10px;
+  }
+  .line-throw {
+      text-decoration: line-through;
+  }
+  .swiper-container{
+      width: 50%;
+  }
+  .rounded-lg{
+      border-radius: 10px;
+  }
+  .rounded-full {
+      border-radius: 9999px;
+  }
+  
+  /* background */
+  
+  .bg-yellow-500{
+      background-color: rgba(243, 187, 21, 0.337);
+  
+  }
+  
+  .bg-opacity{
+      opacity: 70%;
+  }
+  .w-4{
+      width: 1rem;
+    }
+  .w-12{
+      width: 3rem;
+  }
+  .h-4{
+      height: 1rem;
+  }
+  .h-12{
+    height: 3rem;
+  }
+  /* spaceing */
+  /* padding */
+  .p-1 {
+      padding: .25rem;
+  }
+  /* margin */
+  .mt-5{
+   margin-top: 5px;
+  }
+  
+  
+  /* gap */
+  
+  .gap-1{
+      gap: .25rem;  
+    }
+  .gap-2{
+      gap: .5rem;  
+    }
+  .gap-3{
+    gap: .75rem;  
+  }
+  .gap-5{
+    gap: 1.25rem;
+  }
+  
+  
+  
+  
+  /* custom */
+  .digital-btn{
+   background: white;
+   border: 0.5px solid rgb(224, 224, 224);
+   padding: 6px 8px;
+  }
+  .opinios-btn{
+    background: white;
+    border: 0.5px solid rgb(224, 224, 224);
+    padding: 10px;
+  }
+  .input{
+    outline: none;
+    background-color: #f1f1f1;
+    padding: 10px 5px 10px 5px;
+    border: 1px solid #dfdfdf;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: "Almarai";
+  }
+  .input:focus{
+    border: 1.5px solid #000000;
+  }
+  .select-input {
+    outline: none;
+    background-color: #f1f1f1;
+    padding: 6px 3px 6px 5px;
+    border: 1px solid #dfdfdf;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: "Almarai";
+  }
+  
+  .custom-select-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .select-button {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    border-radius: 5px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    font-family: "Almarai";
+  }
+  
+  .arrow {
+    margin-left: 10px;
+    transition: transform 0.2s ease;
+    font-size: 16px; /* Adjust size if needed */
+  }
+  
+  .select-dropdown {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    z-index: 1;
+    width: 100%;
+    margin-top: 4px;
+  }
+  
+  .select-dropdown li {
+    padding: 10px;
+    cursor: pointer;
+    box-sizing: inherit;
+    color: black;
+    font-family: "Almarai";
+  }
+  
+  .select-dropdown li:hover {
+    background-color: rgb(38 101 38);
+    color: white;
+  }
+  
+  .select-button .arrow {
+    transform: rotate(90deg);
+  
+  }
+  /*  color */
+  .text-red-500{
+      color: rgb(220 38 38);
+  }
+  /* rouned */
+  
+  .rounded-md{
+    border-radius: 5px;
+  }
+  /* bg color */
+  
+  .bg-gridant-blue {
+    background-image: linear-gradient(45deg, #1d4ed8, #000);
+  }
+  .bg-gray{
+    background-color: rgb(241 241 241);
+  }
+  .bg-grident-color{
+    background-image: linear-gradient(45deg, #22c55e, #facc15,#dc2626);
+  }
+  .bg-black{
+    background-color: black;
+  }
+  /* spacing */
+  .py-12{
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+  }
+  .py-5{
+      padding-top: 1.25rem;
+      padding-bottom: 1.25rem;
+  }
+  .py-3 {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+  }
+  .px-2{
+    padding-left: .5rem;
+    padding-right: .5rem;
+  }
+  .px-1{
+    padding-left: .25rem;
+    padding-right: .25rem;
+  }
+  .py-10{
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+  .px-2{
+      padding-left: .5rem;
+      padding-right: .5rem;
+  }
+  .px-3{
+      padding-left: 1rem;
+      padding-right: 1rem;
+  }
+  .padding-left{
+    padding-left:5px;
+  }
+  .mt-40{
+    margin-top: 10rem;
+  }
+  /* buttons */
+  .btn-order{
+    background-color: rgb(38 101 38);
+    border: 1px solid rgb(38 101 38);
+    color: white;
+  
+  }
+  /* scroll */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 0; /* عرض الـ scrollbar */
+  }
+  
+  
+  /* نمط لجميع المتصفحات الأخرى */
+  .custom-scrollbar {
+    scrollbar-width: none; /* عرض الـ scrollbar */
+    scrollbar-color: #88888800 #f1f1f100; /* لون الـ scrollbar ومساره */
+  }
+  /* other */
+  .outline-none{
+    outline: none;
+  }
+  .border-none{
+    border: none;
+  }
+  
+  /* medaia */
+  /*  screens */
+  @media (min-width: 1025px) {
+    .swipper-container{
+       display: flex !important;
+    }
+    .veiw{
+      border-radius: 99999px;
+      display: flex;
+      justify-content: center;
+    }
+    .opinios-btn-container{
+      width: 41.666667% !important;
+    }
+    .select-Offer{
+      margin-top: 2.5rem;
+    }
+  }
+  
+  /* Tablet screens */
+  @media (max-width: 1024px) {
+    .swipper-container{
+      display: block !important;
+   }
+   .veiw{
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  
+  }
+  .veiw > div:first-child {
+    display: flex;
+    justify-content: center;}
+  .veiw > div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    margin-top: 2px;
+  }
+   .container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .swiper{
+        height: 67vh;
+  
+  }
+  .select-Offer{
+    margin-top: 3rem;
+  }
+  .m-price{
+    margin-top: 5px;
+  }
+  .m-title{
+    margin-top:30px;
+  }
+  }
+  
+  /* Mobile screens */
+  @media (max-width: 600px) {
+  
+    .container {
+      margin-left: 10px;
+      margin-right: 10px;
+  }
+  .swiper{
+    height: auto;
+  
+  }
+  }
+  .opinios-btn-container{
+    width: 41.666667;
+  }

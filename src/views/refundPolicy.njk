@@ -1,0 +1,19 @@
+{% extends "layouts/layout.njk" %}
+{% from "common/components/Policy.njk" import informations %}
+{% block title %}متجرك - الصفحة الرئيسية{% endblock %}
+
+{% block content %}
+   <div class=" flex justify-center">
+        <div class=" w-5/12">
+        <div class=" text-3xl font-bold my-6">سياسة الاستبدال و الاسترجاع</div>
+        <div class=" ">
+            <ul class=" list-disc list-inside ">
+               {{informations(list=["kh","lnl"])}}
+    
+            </ul>
+        </div>
+        </div>
+    </div>
+     {% include "common/footer.njk" ignore missing %}
+
+{% endblock %}

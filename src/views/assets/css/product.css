@@ -285,7 +285,7 @@
     
   }
   .h-content{
-    height: 100vh;
+    height: 151vh;
   }
 }
 @media  (min-width: 1300px) {
@@ -300,7 +300,7 @@
    }
    .container-section{
     position: absolute;
-    top:5rem;
+    top:8rem;
     left: 8rem;
     width: 41.666667%;
   }

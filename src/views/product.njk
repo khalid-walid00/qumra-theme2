@@ -103,6 +103,8 @@
                         {% for item in products %}
                                 {{ aboutProduct(text=item.text) }}
                             {% endfor %}
+                <li class="mt-1">– مقاوم للماء ويمكن أن يعمل بشكل فعال مع وجود الماء أو أي سوائل</li>
+                <li class="mt-1">– مقاوم للماء ويمكن أن يعمل بشكل فعال مع وجود الماء أو أي سوائل</li>
             </ul>
         </div>
 
@@ -152,9 +154,6 @@
                                 {{ label(text='هذا الحقل مطلوب') }}
                             </div>
 
-                            <div class="font-base mt-10 font-lg">
-                                {{productPrice(text='fsdf',price='34')}}
-                            </div>
                               {{ordersPrice(deliveryCost="شحن مجاني",Total="50")}}
                             <div class=" w-full mt-10">
                                 <button class="btn-order rounded-full w-full py-3 font-base text-lg">اطلب الان</button>

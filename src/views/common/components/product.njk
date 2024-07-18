@@ -1,12 +1,15 @@
 {% macro product(title, price, priceAfterDiscount, imageUrl,slug) %}
+      <div class="card">
     <a class="card" href="product/{{slug}}">
-        <img src="{{imageUrl}}"/>
-        <div>
-            <h5>{{title}}</h5>
-            <span>{{price}}</span>
-            <span>{{priceAfterDiscount}}</span>
-        </div>
+
+                        <img src="{{imageUrl}}" />
+                        <div>
+                            <h5>{{title}}</h5>
+                            <span>{{price}}</span>
+                            <span>{{priceAfterDiscount}}</span>
+                        </div>
     </a>
+      </div>
 {% endmacro %}
 
 {# swiper aboutProduct #}

@@ -11,7 +11,7 @@
 {% from "common/components/product/orderPrice.njk" import ordersPrice%}
 {% from "common/components/product/footer.njk" import footer%}
 {% block content %}
-    <div style="height: 200vh;">
+   
 
         {# swipper #}
  <div class=" sticky-section mx-5 custom-m">
@@ -32,8 +32,12 @@
         </div>
     </div>
 
-{# content #}
 
+
+
+
+{# content #}
+ <div class="custom-height">
  <div  class="h-content md:flex sm:flex xs:flex justify-center">
     <div class="md:w-2/3 sm:w-2/3 sx:w-2/3 container-section " style="margin: 0 4px; ">
          {{productDetails(title="مغسلة السيارات الالمانية",rateNumbers=5,oldPrice="99",currentPrice="150")}}

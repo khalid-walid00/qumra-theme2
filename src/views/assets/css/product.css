@@ -274,7 +274,7 @@
   }
   .sticky-section {
     position: sticky;
-    top: 0;
+    top: 10px;
     margin: 0px 1rem;
   }
   .swipper-width{
@@ -300,7 +300,7 @@
    }
    .container-section{
     position: absolute;
-    top:8rem;
+    top:9rem;
     left: 8rem;
     width: 41.666667%;
   }
@@ -308,6 +308,9 @@
     top: 24rem;
     margin-top: 48rem;
   } */
+ }
+ .custom-height{
+  height: 100vh;
  }
 /* Tablet screens */
 @media (max-width: 992px) {
@@ -389,7 +392,7 @@
 
 .sticky-section {
   position: sticky;
-  top: 0;
+  top: 10px;
   margin: 0px 8rem;
 }
 }
@@ -407,7 +410,7 @@
 
 .sticky-section {
   position: sticky;
-  top: 0;
+  top: 10px;
   margin: 0px 8rem;
 }
 .swipper-width{
@@ -429,7 +432,7 @@
 
 .sticky-section {
   position: sticky;
-  top: 0;
+  top: 10px;
   margin: 0px 8rem;
 }
 .swipper-width{

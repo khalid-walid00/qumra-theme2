@@ -5,6 +5,9 @@
   --skin-primary: #3498db;
   --dark-green: #266526;
 }
+.bg-green{
+  background-color: #266526;
+}
 .swiper-button-prev,
 .swiper-button-next {
   color: black !important; 
@@ -12,7 +15,7 @@
   border-radius: 50%; 
  font-size: 20px !important;
   display: flex;
-  padding: 0 8px 0;
+  padding: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -56,27 +59,6 @@
 
 .bg-opacity{
     opacity: 70%;
-}
-.w-4{
-    width: 1rem;
-  }
-.w-12{
-    width: 3rem;
-}
-.h-4{
-    height: 1rem;
-}
-.h-12{
-  height: 3rem;
-}
-/* spaceing */
-/* padding */
-.p-1 {
-    padding: .25rem;
-}
-/* margin */
-.mt-5{
- margin-top: 5px;
 }
 
 
@@ -205,48 +187,6 @@
 .bg-grident-color{
   background-image: linear-gradient(45deg, #22c55e, #facc15,#dc2626);
 }
-.bg-black{
-  background-color: black;
-}
-/* spacing */
-.py-12{
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
-.py-5{
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-}
-.py-3 {
-  padding-top: .75rem;
-  padding-bottom: .75rem;
-}
-.px-2{
-  padding-left: .5rem;
-  padding-right: .5rem;
-}
-.px-1{
-  padding-left: .25rem;
-  padding-right: .25rem;
-}
-.py-10{
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-.px-2{
-    padding-left: .5rem;
-    padding-right: .5rem;
-}
-.px-3{
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-.padding-left{
-  padding-left:5px;
-}
-.mt-40{
-  margin-top: 10rem;
-}
 /* buttons */
 .btn-order{
   background-color: rgb(38 101 38);
@@ -272,10 +212,44 @@
 .border-none{
   border: none;
 }
-
+/* screens:{
+  xs:"410px",
+  sm:"576px",
+  md:"768px",
+  lg:"992px",
+  xl:"1200px",
+  "2xl":"1400px",
+}, */
 /* medaia */
 /*  screens */
-@media (min-width: 1025px) {
+/* .container-section{
+  position: absolute;
+  top:5rem;
+  left: 2rem;
+  width: 41.666667%;
+}
+.sticky-section {
+  position: sticky;
+  top: 0;
+  margin: 0px 1rem;
+} */
+.swipper-width{
+  width: 524px;
+}
+@media (min-width: 1400px) {
+  .container-section{
+    position: absolute;
+    top:5rem;
+    left: 10rem;
+    width: 41.666667%;
+  }
+  .sticky-section {
+    position: sticky;
+    top: 0;
+    margin: 0px 8rem;
+  }
+}
+@media (min-width: 1200px) {
   .swipper-container{
      display: flex !important;
   }
@@ -290,13 +264,57 @@
   .select-Offer{
     margin-top: 2.5rem;
   }
-}
 
+  /* absolute  xl:left-40 lg:left-16 top-20 w-5/12 */
+  .container-section{
+    position: absolute;
+    top:5rem;
+    left: 6rem;
+    width: 41.666667%;
+  }
+  .sticky-section {
+    position: sticky;
+    top: 0;
+    margin: 0px 1rem;
+  }
+  .swipper-width{
+    width: 573px;
+  }
+  .img-container{
+    display: block !important;
+    
+  }
+  .h-content{
+    height: 100vh;
+  }
+}
+@media  (min-width: 1300px) {
+   .custom-m{
+    margin: 0 8rem !important;
+   }
+   .container-section {
+    position: absolute;
+    top: 5rem;
+    left: 4rem;
+    width: 41.666667%;
+   }
+   .container-section{
+    position: absolute;
+    top:5rem;
+    left: 8rem;
+    width: 41.666667%;
+  }
+  /* .custom-footer-top{
+    top: 24rem;
+    margin-top: 48rem;
+  } */
+ }
 /* Tablet screens */
-@media (max-width: 1024px) {
+@media (max-width: 992px) {
   .swipper-container{
     display: block !important;
  }
+
  .veiw{
   border-radius: 20px;
   display: flex;
@@ -329,10 +347,33 @@
 .m-title{
   margin-top:30px;
 }
+.custom-footer-top{
+  top: 4rem;
+  margin-top: 2rem;
+}
+
+.container-section{
+  /* position: absolute; */
+  top:5rem;
+  left: 10rem;
+}
+.sticky-section {
+  /* position: sticky; */
+  top: 0;
+  margin: 0px 1rem;
+}
+.swipper-width{
+    width: 67.666%;
+}
+}
+@media  (max-width: 700px) {
+  .swipper-width{
+    width: 100%;
+  }
 }
 
 /* Mobile screens */
-@media (max-width: 600px) {
+@media (max-width: 768) {
 
   .container {
     margin-left: 10px;
@@ -341,6 +382,58 @@
 .swiper{
   height: auto;
 
+}
+.swipper-width{
+  width: 350px;
+}
+
+.sticky-section {
+  position: sticky;
+  top: 0;
+  margin: 0px 8rem;
+}
+}
+@media (max-width: 573) {
+
+  .container {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.swiper{
+  height: auto;
+
+}
+
+
+.sticky-section {
+  position: sticky;
+  top: 0;
+  margin: 0px 8rem;
+}
+.swipper-width{
+  width: 350px;
+}
+}
+
+@media (max-width: 410) {
+
+  .container {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.swiper{
+  height: auto;
+
+}
+
+
+.sticky-section {
+  position: sticky;
+  top: 0;
+  margin: 0px 8rem;
+}
+.swipper-width{
+  width: 350px;
 }
 }
 .opinios-btn-container{

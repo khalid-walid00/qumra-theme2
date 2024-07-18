@@ -1,26 +1,26 @@
 {#  offer #}
 {% macro offerProduct(offerTitle,listItems)%}
 
-<div class="font-base font-bold">
-    {# {{ listItems | dump }} #}
-    {{offerTitle}}
-    
-    </div>
-    <div class=" text-gray select-dev w-10-12">
-    <div class="custom-select-container w-full">
-        <button class="select-button" id="select-button">
-                {{listItems[0]}}
-            <span class="arrow">&lt;&gt;</span>
-        </button>
-        <ul class="select-dropdown doc-none" id="select-dropdown">
-            {%for listitem in listItems%}
-            <li>{{listitem}}</li>
-            {%endfor%}
-        </ul>
-    </div>
 
-    </div>
-</div>
+ <div class="font-base font-bold"> {{offerTitle}}</div>
+            <div class=" text-gray select-dev w-10/12">
+                <div class="custom-select-container w-full">
+                    <button class="select-button" id="select-button">
+                       {{listItems[0]}}
+                        <span class="arrow">&lt;&gt;</span>
+                    </button>
+                    <ul class="select-dropdown doc-none" id="select-dropdown">
+                  {%for listitem in listItems%}
+                   <li>{{listitem}}</li>
+                 {%endfor%}
+                    </ul>
+                </div>
+
+            </div>
+
+
+
+ 
  <script>
         document.addEventListener('DOMContentLoaded', function () {
             const selectButton = document.getElementById('select-button');

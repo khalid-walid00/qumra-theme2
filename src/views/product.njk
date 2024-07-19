@@ -19,36 +19,11 @@
             <div dir="rtl" class="c relative">
                 <div class="swiper swiper-initialized swiper-horizontal swiper-pointer-events swiper-rtl rounded-md">
                     <div class="swiper-wrapper" style="transform: translate3d(477px, 0px, 0px); transition-duration: 0ms;">
-                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-prev" data-swiper-slide-index="2"
-                            style="width: 472px; margin-left: 5px;"><img
-                                src="https://files.easy-orders.net/1721231001852431123.jpg"
-                                alt="https://files.easy-orders.net/1721231001852431123.jpg"
-                                class="fasty_product_img aspect-1 h-full w-full rounded-lg object-cover object-center">
-                        </div>
-                        <div class="swiper-slide swiper-slide-active" data-swiper-slide-index="0"
-                            style="width: 472px; margin-left: 5px;"><img
-                                src="https://files.easy-orders.net/1721230992470814804.jpg"
-                                alt="https://files.easy-orders.net/1721230992470814804.jpg"
-                                class="fasty_product_img aspect-1 h-full w-full rounded-lg object-cover object-center">
-                        </div>
-                        <div class="swiper-slide swiper-slide-next" data-swiper-slide-index="1"
-                            style="width: 472px; margin-left: 5px;"><img
-                                src="https://files.easy-orders.net/1721231001684134559.jpg"
-                                alt="https://files.easy-orders.net/1721231001684134559.jpg"
-                                class="fasty_product_img aspect-1 h-full w-full rounded-lg object-cover object-center">
-                        </div>
-                        <div class="swiper-slide swiper-slide-duplicate-prev" data-swiper-slide-index="2"
-                            style="width: 472px; margin-left: 5px;"><img
-                                src="https://files.easy-orders.net/1721231001852431123.jpg"
-                                alt="https://files.easy-orders.net/1721231001852431123.jpg"
-                                class="fasty_product_img aspect-1 h-full w-full rounded-lg object-cover object-center">
-                        </div>
-                        <div class="swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
-                            data-swiper-slide-index="0" style="width: 472px; margin-left: 5px;"><img
-                                src="https://files.easy-orders.net/1721230992470814804.jpg"
-                                alt="https://files.easy-orders.net/1721230992470814804.jpg"
-                                class="fasty_product_img aspect-1 h-full w-full rounded-lg object-cover object-center">
-                        </div>
+                        
+             {%for item in product.images %}
+            {{swiperContent (img=item.imageUrl)}}
+            {%endfor %}
+                   
                     </div>
                     <div
                         class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
@@ -109,31 +84,13 @@
                             padding-top: 0 !important;
                         }
                     </style>
-                    <div class="flex items-start">
-                        <h1
-                            class="product_name text-3xl flex-1 font-extrabold tracking-tight text-gray-900 !text-lg md:!text-xl">
-                            جهاز تجفيف وكي الملابس السريع</h1>
-                    </div>
-                    <div class="flex">
-                        <div class="mt-2 flex items-center ">
-                            <p class="text-sm me-1">لا يوجد تقييمات بعد</p><svg xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="h-4 w-4 text-[#ECB018]">
-                                <path fill-rule="evenodd"
-                                    d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="mt-3">
-                        <div class="flex items-center gap-x-3">
-                            <div class="flex items-center gap-x-1 text-red-400">
-                                <p id="sale-price" class="text-xl font-bold ">175</p><span class="text-xl">AED</span>
-                            </div>
-                            <p class="text-base text-gray-500 line-through">259<!-- -->AED</p>
-                        </div>
-                    </div>
+                        {{productDetails(title="مغسلة السيارات الالمانية",rateNumbers=5,oldPrice="99",currentPrice="150")}}
+            
                 </div>
-                <div></div>
+                <div>
+
+                </div>
+                    
                 <div class=" px-3 bg-gridant-blue  lg:rounded-full xl:rounded-full 2xl:rounded-full md:rounded-lg
                  sm:rounded-lg xs:rounded-lg py-5 flex  rounded-full   text-white justify-between mt-5">
 
@@ -170,6 +127,10 @@
                     </div>
         
                 </div>
+
+      
+      
+      
         <div class=" text-red-600 font-bold text-lg  mt-2">فقط متبقي 13 قطعة</div>
                 
                 <div class="bg-gray w-full flex justify-end rounded-md">
@@ -208,14 +169,9 @@
                             role="tabpanel" tabindex="0" data-headlessui-state="selected"
                             aria-labelledby="headlessui-tabs-tab-:r0:">
                             <div class="ql-editor leading-10 py-2" dir="auto" style="text-align: start;">
+
                                 <p class="ql-align-right">جهاز تجفيف و كي الملابس</p>
-                                <p class="ql-align-right">مزود بتقنية جديدة للتجفيف السريع</p>
-                                <p class="ql-align-right">يحتوي غطاء يجعل الجهاز مثل غرفة صغيرة</p>
-                                <p class="ql-align-right">يمكنك وضع العديد من قطع الملابس داخلها</p>
-                                <p class="ql-align-right">تدفق عالي للحرارة و الهواء للتخلص من الرطوبة بالملابس</p>
-                                <p class="ql-align-right">جهاز محمول قابل للطي و سهل الاستخدام</p>
-                                <p class="ql-align-right">تلبي جميع الاحتياجات و مناسبة للرحلات و التخييم</p>
-                                <p class="ql-align-right">كفاءة عالية و بطارية جبارة تعمل لساعات من شحنة واحدة</p>
+                
                             </div>
                         </div>
                     </div>

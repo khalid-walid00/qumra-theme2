@@ -197,6 +197,17 @@ dt {
     gap: 32px;
 
 }
+.menu-icon {
+    cursor: pointer;
+}
+
+#menu {
+    display: none;
+}
+
+#menu.active {
+    display: block;
+}
 .header_links .links > a 
 {
     display: flex;
@@ -373,6 +384,9 @@ footer >  div:nth-child(1) p
 .shadow{
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)
 
+}
+.z-999{
+    z-index: 9999;
 }
 /*//////////////////////////// font //////////////////////*/
 

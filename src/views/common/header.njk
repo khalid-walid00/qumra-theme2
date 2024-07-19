@@ -1,5 +1,5 @@
 <!-- start Header  -->
-  <div class=" overflow-x-hidden">
+ <div class=" overflow-x-hidden">
         <div class=" bg-green h-24">
             <div class=" text-white font-bold text-center text-lg">وفر أكثر من 100 درهم</div>
             <div class=" flex justify-center mt-3">
@@ -9,6 +9,9 @@
                             src="https://easyorders.fra1.digitaloceanspaces.com/1714864575025139370.jpg" alt="">
                     </div>
                     <div class="relative flex-1">
+                     
+
+
                         <input type="text" placeholder="أبحث عن..." class="input flex-1" value="">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" aria-hidden="true" class=" w-5 absolute left-2 top-3">
@@ -17,6 +20,12 @@
                         </svg>
 
                     </div>
+                    <svg width="40" height="40" viewBox="0 0 24 24" onclick="toggleMenu()" fill="white" 
+                    class=" text-white lg:hidden md:hidden w-10 h-10 sm:hidden mx-10" xmlns="http://www.w3.org/2000/svg">
+                        <rect y="4" width="24" height="2" fill="black"/>
+                        <rect y="11" width="24" height="2" fill="black"/>
+                        <rect y="18" width="24" height="2" fill="black"/>
+                    </svg>
                 </div>
 
 
@@ -30,18 +39,18 @@
         </div>
 </div>
 
-<div class="lg:hidden md:hidden sm:hidden mx-10" onclick="toggleMenu()">
-    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect y="4" width="24" height="2" fill="black"/>
-        <rect y="11" width="24" height="2" fill="black"/>
-        <rect y="18" width="24" height="2" fill="black"/>
-    </svg>
-</div>
-<div class=" lg:hidden md:hidden sm:hidden lg:relative md:relative sm:relative bg-white absolute shadow top-36 right-0 h-max z-999 w-40 rounded-l-lg hidden" id="menu">
+
+<div class=" lg:hidden md:hidden sm:hidden lg:relative md:relative sm:relative bg-white absolute shadow top-24 left-0 h-max z-999 w-40 rounded-r-lg hidden" id="menu">
     <div class="hover:bg-green-800 hover:text-white mt-2 px-5"><a class="text-center" href="/">المتجر</a></div>
     <div class="hover:bg-green-800 hover:text-white mt-2 px-5"><a class="text-center" href="./pages/refund-policy.html">سياسة الاستبدال و الاسترجاع</a></div>
     <div class="hover:bg-green-800 hover:text-white my-2 px-5"><a class="text-center" href="./pages/shipping-policy.html">سياسة الشحن</a></div>
 </div>
     </div>
+<script>
+       function toggleMenu() {
+    var menu = document.getElementById("menu");
+    menu.classList.toggle("active");
+}
+</script>
 
 <!-- End Header  -->

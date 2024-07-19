@@ -90,7 +90,8 @@
                 <div>
 
                 </div>
-                    
+        {{offerProduct(offerTitle="احصل علي خصم",listItems=["asd","asd","asd"])}}
+          
                 <div class=" px-3 bg-gridant-blue  lg:rounded-full xl:rounded-full 2xl:rounded-full md:rounded-lg
                  sm:rounded-lg xs:rounded-lg py-5 flex  rounded-full   text-white justify-between mt-5">
 
@@ -127,8 +128,6 @@
                     </div>
         
                 </div>
-
-      
       
       
         <div class=" text-red-600 font-bold text-lg  mt-2">فقط متبقي 13 قطعة</div>
@@ -177,41 +176,60 @@
                     </div>
                 </div>
             </div>
+             <div class="">
+            <div class=" font-base text-xl font-bold">يرجى ادخال معلوماتك لإكمال الطلب</div>
+            <div class=" font-base text-base mt-5">عدد القطع</div>
+            <div class="grid grid-cols-3 w-2/12 mt-3">
+                <button class="digital-btn outline-none   rounded-md  w-max">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+                        class="w-4 cursor-pointer h-4 text-gray-900">
+                        <path fill-rule="evenodd"
+                            d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+                <div class=" py-1 px-3 rounded-md font-base  w-max">1</div>
+                <button class="digital-btn outline-none   rounded-md  w-max">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"
+                        class="w-4 cursor-pointer h-4 text-gray-900">
+                        <path fill-rule="evenodd"
+                            d="M3.75 12a.75.75 0 01.75-.75h15a.75.75 0 010 1.5h-15a.75.75 0 01-.75-.75z"
+                            clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
             <div class="product_form_checkout mt-6 bg-white p-4 rounded-md">
                 <p class="text-lg font-bold">يرجى ادخال معلوماتك لإكمال الطلب</p>
-                <form>
-                    <div class="">
-                        <label>اسمك بالكامل</label>
-                        <input type="text" class="input mt-1" placeholder="" required>
-                        <label class=" text-md text-red-500">هذا الحقل مطلوب</label>
-                    </div>
-                    <div class="mt-4">
-                        <label>رقم الهاتف</label>
-                        <input type="text" class="input mt-1" placeholder="" required>
-                        <label class=" text-md  text-red-500">هذا الحقل مطلوب</label>
-                    </div>
-                    <div class="mt-4">
-                        <label>العنوان بالتفصيل</label>
-                        <textarea type="text" class="input mt-1" rows="5" placeholder="" required></textarea>
-                        <label class=" text-md  text-red-500">هذا الحقل مطلوب</label>
-                    </div>
-    
-                    <div class="font-base mt-10 font-lg">
-                        <div class="flex    justify-between">
-                            <div class=" text-gray">تكلفة الشحن</div>
-                            <div class="font-bold">شحن مجاني</div>
-                        </div>
-                        <div class="flex justify-between mt-3">
-                            <div class=" text-gray">الاجمالي</div>
-                            <div class=" font-bold">69 AED</div>
-                        </div>
-                    </div>
-    
-                    <div class=" w-full mt-10">
-                        <button class="btn-order rounded-full w-full py-3 font-base text-lg">اطلب الان</button>
-                    </div>
-    
-                </form>
+                   <form>
+                <div>
+                    {# <label>اسمك بالكامل</label> #}
+                    {# <input type="text" class="input mt-1" placeholder="" required> #}
+                    {{ label(text='اسمك بالكامل') }}
+                    {{ field(name, value='', type='text') }}
+                    {{ label(text='هذا الحقل مطلوب') }}
+
+                </div>
+                <div class="mt-4">
+                    {{ label(text='رقم الهاتف') }}
+                    {{ field(name, value='', type='text') }}
+                    {{ label(text='هذا الحقل مطلوب') }}
+                </div>
+                <div class="mt-4">
+                    {{ label(text='العنوان بالتفصيل') }}
+                    {{ field(name, value='', type='text') }}
+                    {{ label(text='هذا الحقل مطلوب') }}
+                </div>
+
+                <div class="font-base mt-10 font-lg">
+                    {{productPrice(text='fsdf',price='34')}}
+                </div>
+
+                <div class=" w-full mt-10">
+                    <button class="btn-order rounded-full w-full py-3 font-base text-lg">اطلب الان</button>
+                </div>
+
+            </form>
             </div>
         </div>
     </div>
@@ -233,10 +251,10 @@
             </div>
         </div>
     </div>
-</div>
+     </div>  
     </div>
-{{footer()}}
- {# footer #}
+
+
 
 {# end #}
 </div>

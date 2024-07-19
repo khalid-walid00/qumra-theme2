@@ -342,7 +342,7 @@ footer >  div:nth-child(1) p
 
 .swiper {
     width: 100%;
-    height: 67vh;
+    /* height: 67vh; */
     margin-top: 5%;
   }
 
@@ -368,13 +368,22 @@ footer >  div:nth-child(1) p
 .bg-yellow{
  background-color:rgb(254 249 195);
 }
-/* zindex */
-.z-999{
-    z-index: 9999 !important;
+
+/* shadow */
+.shadow{
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)
+
 }
 /*//////////////////////////// font //////////////////////*/
 
+.newCard:hover{
+    margin-top: -10px;
+    transition: 0.5s;
+    cursor: pointer;
+    box-shadow: 2px 0px 10px 2px rgba(0, 0, 0, 0.337);
 
+
+}
 
 /* animation */
 

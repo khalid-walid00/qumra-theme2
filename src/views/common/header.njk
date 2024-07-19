@@ -17,59 +17,31 @@
                         </svg>
 
                     </div>
-
                 </div>
 
 
             </div>
         </div>
-</div>
-<div class=" bg-white flex w-full py-1 justify-start z-999 shadow">
-    <div class=" text-gray select-dev z-999  w-2/12">
-        <div class="custom-select-container z-999  w-full">
-            <button class="select-button z-999 " id="navBar-button">
-                المتجر
-                <span class="arrow">&lt;&gt;</span>
-            </button>
-            <ul class="select-dropdown doc-none z-999 " id="navBar-dropdown">
-                <li><a class="w-full inline-block z-999 " href="./pages/refund-policy.html">سياسة الاستبدال و الاسترجاع</a></li>
-                <li><a class="w-full inline-block z-999 " href="./pages/shipping-policy.html">سياسة الشحن</a></li>
-                <li><a class="w-full inline-block z-999 " href="./pages/shipping-policy.html">تست</a></li>
-            </ul>
+        <div class=" hidden lg:flex md:flex sm:flex bg-white  w-full py-2 justify-center  header_links">
+            <div class=" w-10/12 flex items-center  justify-start gap-4  ">
+            <a class="text-center" href="/">المتجر</a>
+            <a class="text-center" href="./pages/refund-policy.html">سياسة الاستبدال و الاسترجاع</a>
+            <a class="text-center" href="./pages/shipping-policy.html">سياسة الشحن</a>
         </div>
+</div>
 
+<div class="lg:hidden md:hidden sm:hidden mx-10" onclick="toggleMenu()">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect y="4" width="24" height="2" fill="black"/>
+        <rect y="11" width="24" height="2" fill="black"/>
+        <rect y="18" width="24" height="2" fill="black"/>
+    </svg>
+</div>
+<div class=" lg:hidden md:hidden sm:hidden lg:relative md:relative sm:relative bg-white absolute shadow top-36 right-0 h-max z-999 w-40 rounded-l-lg hidden" id="menu">
+    <div class="hover:bg-green-800 hover:text-white mt-2 px-5"><a class="text-center" href="/">المتجر</a></div>
+    <div class="hover:bg-green-800 hover:text-white mt-2 px-5"><a class="text-center" href="./pages/refund-policy.html">سياسة الاستبدال و الاسترجاع</a></div>
+    <div class="hover:bg-green-800 hover:text-white my-2 px-5"><a class="text-center" href="./pages/shipping-policy.html">سياسة الشحن</a></div>
+</div>
     </div>
 
-    </div>
-    </div>
-       <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const selectButton = document.getElementById('navBar-button');
-            const selectDropdown = document.getElementById('navBar-dropdown');
-
-            selectButton.addEventListener('click', function () {
-                const isOpen = selectDropdown.style.display === 'block';
-                selectDropdown.style.display = isOpen ? 'none' : 'block';
-                selectButton.classList.toggle('active', !isOpen);
-            });
-
-            selectDropdown.addEventListener('click', function (event) {
-                if (event.target.tagName === 'LI') {
-                    selectButton.textContent = event.target.textContent;
-                    selectButton.appendChild(document.querySelector('.arrow'));
-                    selectDropdown.style.display = 'none';
-                    selectButton.classList.remove('active');
-                }
-            });
-
-            document.addEventListener('click', function (event) {
-                if (!selectButton.contains(event.target) && !selectDropdown.contains(event.target)) {
-                    selectDropdown.style.display = 'none';
-                    selectButton.classList.remove('active');
-                }
-            });
-        });
-
-    </script>
-<!-- End Header  --> 
- 
+<!-- End Header  -->

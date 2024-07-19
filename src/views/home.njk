@@ -17,18 +17,24 @@
         <div class="swiper-pagination"></div>
     </div>
     <div class="container">
-        <div class="headerTitle">
-            <h3> مقترحة لك</h3>
-        </div>
-
-        <div class="product">
-            <div class="cards">
-                {% for item in products %}
-                    {{ product(title=item.title,priceAfterDiscount=item.priceAfterDiscount,price=item.price,imageUrl=item.images[0].imageUrl,slug=item.slug) }}
-                {% endfor %}
-            </div>
+       <div class="headerTitle ">
+                <h3> مقترحة لك</h3>
+                <a href="/collections/shop">المزيد</a>
         </div>
     </div>
+        
+        <div class="flex w-full justify-center">
+           <div class="w-10/12">
+       <div class=" grid grid-cols-4 gap-20">
+         
+        
+         {% for item in products %}
+                    {{ product(title=item.title,priceAfterDiscount=item.priceAfterDiscount,price=item.price,imageUrl=item.images[0].imageUrl,slug=item.slug) }}
+                {% endfor %}
+             
+       </div>
+   </div>
+        </div>
         {% include "common/footer.njk" ignore missing %}
     
     </div>

@@ -25,12 +25,10 @@
             <h3> مقترحة لك</h3>
         </div>
 
-        <div class="product">
-            <div class="cards">
+    </div>
+       <div class=" grid grid-cols-4 gap-20">
                 {% for item in products %}
                     {{ product(title=item.title,priceAfterDiscount=item.priceAfterDiscount,price=item.price,imageUrl=item.images[0].imageUrl,slug=item.slug) }}
                 {% endfor %}
-            </div>
         </div>
-    </div>
 {% endblock %}

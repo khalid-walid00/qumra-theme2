@@ -1,43 +1,395 @@
 {% extends "layouts/layout.njk" %}
 {% from "common/components/product.njk" import product %}
+{% from "common/components/LandingPage/vedio/index.njk" import SectionVedio %}
+{% from "common/components/LandingPage/headers/index.njk" import Head,Description %}
+{% from "common/components/LandingPage/cards/index.njk" import CardAbout,CardArticls %}
+{% from "common/components/LandingPage/lists/index.njk" import ListItem %}
+{% from "common/components/LandingPage/swipper/index.njk" import Swipper1,Swipper2 %}
+
 {% block title %}متجرك - الصفحة الرئيسية{% endblock %}
 {% block content %}
-    <div class="bodyMain"> 
+    <!-- vedio -->
+{{SectionVedio(vedioUrl="/images/saudi arabia.mp4",doc="نفخر بفريق بيزنس لينك الخبير والمؤهل للتعامل مع اجراءات تأسيس الشركات
+في السعودية. نحن نقدم لك ليس فقط استشارات متخصصة بل ودعمًا شاملاً
+يمنحك انطلاق قوي وناجح في سوق الأعمال والتجارة السعودي.",
+btnText="احصل على استشارة مجانية",imgUrl="images/GOOGLE-REVIEWS-1-1.webp")}}
+    <!-- vedio -->
 
-    
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img src="images/landing.png" alt="" srcset="">
+    <!-- content -->
+    <div class="flex flex-col items-center justify-center  ">
+        <div class="w-9/12">
+            <!-- small about -->
+            <div class="flex flex-col items-center justify-center mt-16">
+
+               {{Head(text="توسع بأعمالك في السعودية مع خدمات التأسيس المثالية من بيزنس لينك حقق الريادة في المملكة مع خبرة الشريك الأكثر ثقة")}}
+
+               {{Description(text="تتقدم بيزنس لينك خدمات استشارية احترافية لتمكينك داخل المملكة من خلال تأسيس شركة مملوكة بالكامل تحظى
+                    بالعديد من المزايا الاستثمارية، مع الالتزام باللوائح الحكومية ومتطلبات هيئة الاستثمار. نلتزم بتقديم
+                    خدمات موثوقة لترتقي بأعمالك في السعودية بالمجهود والوقت الأقل.",class="font-semibold  text-mainColor")}}
+
+
             </div>
-            <div class="swiper-slide">
-                <img src="images/landing.png" alt="" srcset="">
+            <!-- small about -->
+
+            <!-- cards -->
+            <div class=" grid  grid-cols-2 gap-4 mt-8 ">
+                {# {%for item in card%}
+                {%endfor%} #}
+             {{CardAbout(title="تأسيس شركة ذات مسؤولية محدودة في السعودية",
+             firstText="هي الشكل الأكثر شيوعا للدخول في مشاريع مشتركة مع شركاء سعوديين، يؤسسها شخص واحد أو أكثر.وتعد ذمتها مستقلة عن الذمة 
+             المالية لكل شريك فيها، ولا يكون الشريك فيها مسؤولاً عن الديون والالتزامات إلا بقدر حصته في رأس المال",secoundText="خبراء بيزنس لينك على دراية بكافة الأنظمة ولوائح تأسيس الشركات في السعودية. فريقنا
+              مؤهل للقيام بكافة إجراءات التأسيس وخدمات إدارة الشؤون القانونية للشركة.")}}
+
+              {{CardAbout(title="تأسيس شركة ذات مسؤولية محدودة في السعودية",
+             firstText="هي الشكل الأكثر شيوعا للدخول في مشاريع مشتركة مع شركاء سعوديين، يؤسسها شخص واحد أو أكثر.وتعد ذمتها مستقلة عن الذمة 
+             المالية لكل شريك فيها، ولا يكون الشريك فيها مسؤولاً عن الديون والالتزامات إلا بقدر حصته في رأس المال",secoundText="خبراء بيزنس لينك على دراية بكافة الأنظمة ولوائح تأسيس الشركات في السعودية. فريقنا
+              مؤهل للقيام بكافة إجراءات التأسيس وخدمات إدارة الشؤون القانونية للشركة.")}}
+         
+          {{CardAbout(title="تأسيس شركة ذات مسؤولية محدودة في السعودية",
+             firstText="هي الشكل الأكثر شيوعا للدخول في مشاريع مشتركة مع شركاء سعوديين، يؤسسها شخص واحد أو أكثر.وتعد ذمتها مستقلة عن الذمة 
+             المالية لكل شريك فيها، ولا يكون الشريك فيها مسؤولاً عن الديون والالتزامات إلا بقدر حصته في رأس المال")}}
+       
+          {{CardAbout(title="تأسيس شركة ذات مسؤولية محدودة في السعودية",
+             firstText="هي الشكل الأكثر شيوعا للدخول في مشاريع مشتركة مع شركاء سعوديين، يؤسسها شخص واحد أو أكثر.وتعد ذمتها مستقلة عن الذمة 
+             المالية لكل شريك فيها، ولا يكون الشريك فيها مسؤولاً عن الديون والالتزامات إلا بقدر حصته في رأس المال")}}
+          
+          
+          
+            </div>
+            <!-- cards -->
+
+        </div>
+
+
+        <!-- التعقيب  -->
+        <div class=" bg-wheatColor w-full flex flex-col items-center mt-14 py-14">
+
+            
+               {{Head(text="خدمات التعقيب في المملكة العربية السعودية")}}
+
+              <div class="w-9/12">
+                 {{Description(text="خبرائنا على استعداد لتقديم خدمات التعقيب بشمولية و مهنية مع كل الجهات والمصالح الحكومية والمؤسسات العامة من وزارة التجارة، هيئة الاستثمار، الأمانات والبلديات، وجهات استخراج الرخص ومكاتب العمل.",
+                 class=" text-secoundColor"
+                 )}}
+            </div>
+            <div class=" grid grid-cols-3 gap-6 w-11/12 text-secoundColor mt-8">
+                <ul>
+                    {%for item in [1,2,3,4,5]%}
+                   {{ListItem(text="خدمات تسجيل العلامات التجارية")}}
+                    {%endfor%}
+                
+                </ul>
+                <ul>
+                  {%for item in [1,2,3,4,5]%}
+                   {{ListItem(text="خدمات تسجيل العلامات التجارية")}}
+                    {%endfor%}
+                </ul>
+                <ul>
+                       {%for item in [1,2,3,4,5]%}
+                   {{ListItem(text="خدمات تسجيل العلامات التجارية")}}
+                    {%endfor%}
+                </ul>
             </div>
         </div>
-        <div class="swiper-pagination"></div>
-    </div>
-     <div class=" my-5 flex justify-center w-full">
-                    <div class=" flex w-full justify-between">
-                    <h3 class="font-bold text-2xl"> مقترحة لك</h3>
-                    <a href="/collections/shop">المزيد</a>
+        <!-- التعقيب  -->
 
+
+        <div class=" w-full flex flex-col items-center mt-14 py-14">
+
+               {{Head(text="شركاء مسيرة النجاح")}}
+
+              <div class="w-10/12"> {{Description(text="لقد كان لنا شرف العمل مع باقة متنوعة من العملاء، بدءاً من الشركات الناشئة 
+               وصولاً إلى الشركات الكبيرة.
+                نحن ملتزمون بتقديم حلول متخصصة تلبي احتياجات تاسيس الشركات في السعودية.",class="text-secoundColor")}}
+                 </div>
+            <div class="w-9/12 mt-8">
+                <!-- Swiper -->
+               {{Swipper1(imgsUrl="/images/prand1.png")}}
+                <!-- Swiper -->
+
+            </div>
+        </div>
+
+        <!-- التقديم -->
+        <div class=" h-screen w-full">
+            <div class=" relative bg-form h-3/4 w-full flex flex-col items-center mt-14 py-14">
+                <div class="absolute top-0 right-0 left-0 bottom-0 bg-mainColor opacity-80"></div>
+                <div class=" flex w-full justify-center">
+                    <div class="flex w-10/12 justify-around ">
+                        <!-- form -->
+
+                        <div class=" relative bg-black z-50 w-2/5 -top-28 px-4 py-6 text-white">
+                            <div class=" font-bold text-3xl w-full text-center mb-9 mt-4">احصل على استشارة مجانية</div>
+                            <form>
+                                <div class="flex justify-between gap-4">
+                                    <input placeholder="الاسم" type="text"
+                                        class=" w-full outline-none py-2 px-1 rounded-md">
+                                    <input placeholder="الاسم" type="text"
+                                        class=" w-full outline-none py-2 px-1 rounded-md">
+                                </div>
+                                <div class="my-8">
+                                    <input placeholder="الاسم" type="text"
+                                        class=" w-full outline-none py-2 px-1 rounded-md">
+                                </div>
+                                <div class="flex justify-end  w-full text-black z-50 bg-white rounded-md">
+                                    <input id="phone" class="w-full py-2 rounded-md outline-none " type="tel">
+                                </div>
+                                <div class="mt-8">
+                                    <textarea rows="3" placeholder="الاسم" type="text"
+                                        class=" w-full outline-none py-2 px-1 rounded-md"></textarea>
+                                </div>
+                                <div class=" my-16">
+                                    <button class=" w-full py-2 bg-red-600 rounded-lg">التقديم</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class=" z-40 w-5/12 flex items-center" style="height: 24rem;">
+                            <!-- form -->
+
+
+                            <!-- Swiper -->
+
+                            <div class="swiper mySwiper2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide ">
+                                        <div class="flex justify-end gap-4">
+                                            <div class="">
+                                                <div class=" text-white">حبيبه</div>
+                                                <div class=" text-gray-600 text-xs">29 may 2023</div>
+                                            </div>
+                                            <div
+                                                class="w-14 h-14 rounded-full bg-green-800 flex items-center justify-center text-white">
+                                                ح</div>
+                                        </div>
+                                        <div class="bg-white rounded-md p-4 h-40 mt-4">
+                                            <div class="flex justify-end">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="#FFD400" aria-hidden="true"
+                                                    class="text-gray-300 h-4 w-4 flex-shrink-0">
+                                                    <path fill-rule="evenodd"
+                                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="#FFD400" aria-hidden="true"
+                                                    class="text-gray-300 h-4 w-4 flex-shrink-0">
+                                                    <path fill-rule="evenodd"
+                                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="#FFD400" aria-hidden="true"
+                                                    class="text-gray-300 h-4 w-4 flex-shrink-0">
+                                                    <path fill-rule="evenodd"
+                                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="#FFD400" aria-hidden="true"
+                                                    class="text-gray-300 h-4 w-4 flex-shrink-0">
+                                                    <path fill-rule="evenodd"
+                                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="#FFD400" aria-hidden="true"
+                                                    class="text-gray-300 h-4 w-4 flex-shrink-0">
+                                                    <path fill-rule="evenodd"
+                                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="#FFD400" aria-hidden="true"
+                                                    class="text-gray-300 h-4 w-4 flex-shrink-0">
+                                                    <path fill-rule="evenodd"
+                                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                            التعامل مع الاخت ملك فوق الممتاز و دقه في الوقت و سرعه في انجاز الاجراءات
+                                            تستاهلون اكثر من خمس نجوم
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide ">
+                                        <div class="flex justify-end gap-4">
+                                            <div class="">
+                                                <div class=" text-white">حبيبه</div>
+                                                <div class=" text-gray-600 text-xs">29 may 2023</div>
+                                            </div>
+                                            <div
+                                                class="w-14 h-14 rounded-full bg-green-800 flex items-center justify-center text-white">
+                                                ح</div>
+                                        </div>
+                                        <div class="bg-white rounded-md p-4 h-40 mt-4">
+                                            <div class="flex justify-end">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="#FFD400" aria-hidden="true"
+                                                    class="text-gray-300 h-4 w-4 flex-shrink-0">
+                                                    <path fill-rule="evenodd"
+                                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="#FFD400" aria-hidden="true"
+                                                    class="text-gray-300 h-4 w-4 flex-shrink-0">
+                                                    <path fill-rule="evenodd"
+                                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="#FFD400" aria-hidden="true"
+                                                    class="text-gray-300 h-4 w-4 flex-shrink-0">
+                                                    <path fill-rule="evenodd"
+                                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="#FFD400" aria-hidden="true"
+                                                    class="text-gray-300 h-4 w-4 flex-shrink-0">
+                                                    <path fill-rule="evenodd"
+                                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="#FFD400" aria-hidden="true"
+                                                    class="text-gray-300 h-4 w-4 flex-shrink-0">
+                                                    <path fill-rule="evenodd"
+                                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="#FFD400" aria-hidden="true"
+                                                    class="text-gray-300 h-4 w-4 flex-shrink-0">
+                                                    <path fill-rule="evenodd"
+                                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                            التعامل مع الاخت ملك فوق الممتاز و دقه في الوقت و سرعه في انجاز الاجراءات
+                                            تستاهلون اكثر من خمس نجوم
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide px-40">
+                                        <div class="flex justify-end gap-4">
+                                            <div class="">
+                                                <div class=" text-white">حبيبه</div>
+                                                <div class=" text-gray-600 text-xs">29 may 2023</div>
+                                            </div>
+                                            <div
+                                                class="w-14 h-14 rounded-full bg-green-800 flex items-center justify-center text-white">
+                                                ح</div>
+                                        </div>
+                                        <div class="bg-white rounded-md p-4 h-40 mt-4">
+                                            <div class="flex justify-end">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="#FFD400" aria-hidden="true"
+                                                    class="text-gray-300 h-4 w-4 flex-shrink-0">
+                                                    <path fill-rule="evenodd"
+                                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="#FFD400" aria-hidden="true"
+                                                    class="text-gray-300 h-4 w-4 flex-shrink-0">
+                                                    <path fill-rule="evenodd"
+                                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="#FFD400" aria-hidden="true"
+                                                    class="text-gray-300 h-4 w-4 flex-shrink-0">
+                                                    <path fill-rule="evenodd"
+                                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="#FFD400" aria-hidden="true"
+                                                    class="text-gray-300 h-4 w-4 flex-shrink-0">
+                                                    <path fill-rule="evenodd"
+                                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="#FFD400" aria-hidden="true"
+                                                    class="text-gray-300 h-4 w-4 flex-shrink-0">
+                                                    <path fill-rule="evenodd"
+                                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+                                                    fill="#FFD400" aria-hidden="true"
+                                                    class="text-gray-300 h-4 w-4 flex-shrink-0">
+                                                    <path fill-rule="evenodd"
+                                                        d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+                                                        clip-rule="evenodd"></path>
+                                                </svg>
+                                            </div>
+                                            التعامل مع الاخت ملك فوق الممتاز و دقه في الوقت و سرعه في انجاز الاجراءات
+                                            تستاهلون اكثر من خمس نجوم
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+                                <div class=" text-center font-semibold my-1 text-white">Google rating score:4.6 of 5
+                                </div>
+                                <div class=" text-center text-white">based on <span class=" underline ">247
+                                        reviews</span></div>
+                            </div>
+
+                            <!-- Swiper JS -->
+
+
+                        </div>
+
+                    </div>
                 </div>
             </div>
-        <div class="flex w-full justify-center">
-           <div class="lg:w-10/12 w-11/12">
-       <div class=" grid lg:grid-cols-4 xl:grid-cols-4 2xl:grid-cols-4 content-center  
-       place-items-center md:gap-2 md:grid-cols-3 gap-y-2  sm:gap-2 sm:grid-cols-2 lg:gap-16">
- 
-               {% for item in products %}
-                    {{ product(title=item.title,priceAfterDiscount=item.priceAfterDiscount,price=item.price,imageUrl=item.images[0].imageUrl,slug=item.slug) }}
-                {% endfor %}
-             
-       </div>
-   </div>
         </div>
 
+        <!-- التقديم -->
+
+
+        <!-- our team in environment -->
+        <div class=" w-full flex flex-col items-center mt-14 py-14">
+
+         {{Head(text="شركاؤنا من الجهات الحكومية")}}
+
+            <div class="w-9/12 mt-8">
+                <!-- Swiper -->
+                {{Swipper2(imgsUrl="/images/prand.png")}}
+            </div>
         </div>
-    
+        <!-- our team in environment -->
+
+         {{Head(text="أحدث المدونات")}}
+        <div class=" w-9/12">
+            <div class="  mt-8 grid grid-cols-3 gap-4">
+             {%for item in [1,2,3]%}
+                {{CardArticls(image="/images/card1.webp",text="فتح شركة تأجير سيارات في السعودية: دليل المستثمر",date="يونيو 28, 2024")}}
+                {%endfor%}
+            </div>
+
+            <div class=" text-mainColor my-20 flex justify-center">
+                <a class=" bg-red-500  text-white px-12 py-1 rounded-md border border-dotted border-opacity-55 border-white "
+                    href="">اخر الاخبار</a>
+            </div>
+
+        </div>
+
+        <div class=" w-9/12">
+            <div class="flex justify-between gap-10">
+                <div class="w-1/2">
+                   {{MapDetails(title="بيزنس لينك (فرع المملكة العربية السعودية)",src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6825.608684709208!2d29.92428191328253!3d31.198437951209733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m3!3e6!4m0!4m0!5e0!3m2!1sar!2seg!4v1721815081792!5m2!1sar!2seg")}}
+                </div>
+                <div class="w-1/2">
+                 {{MapDetails(title="بيزنس لينك (فرع المملكة العربية السعودية)",src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6825.608684709208!2d29.92428191328253!3d31.198437951209733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m3!3e6!4m0!4m0!5e0!3m2!1sar!2seg!4v1721815081792!5m2!1sar!2seg")}}
+                </div>
+            </div>
+        </div>
+
     </div>
+    <!-- content -->
+
 {% endblock %}
 

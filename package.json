@@ -20,7 +20,7 @@
     "morgan": "~1.9.1",
     "nodemon": "^3.1.4",
     "nunjucks": "^3.2.4",
-    "qumra-client": "^1.0.15",
+    "qumra-client": "^1.0.17",
     "referrer-policy": "^1.2.0",
     "user-agents": "^1.1.265",
     "uuid": "^10.0.0"

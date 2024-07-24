@@ -1,10 +1,10 @@
 {%macro Head(text="")%}
-<div class=" w-9/12 text-3xl text-mainColor font-bold text-center"
+<div class=" lg:w-9/12 md:w-10/12 sm:w-11/12 w-full lg:text-3xl md:text-2xl text-xl text-mainColor font-bold text-center"
 >{{text}}</div>
 {%endmacro%}
 
 {%macro Description(text="",class="")%}
- <div class=" {{class}} text-lg text-center mt-4">
+ <div class=" {{class}} lg:text-lg  text-center mt-4">
                     {{text}}
                 </div>
 {%endmacro%}

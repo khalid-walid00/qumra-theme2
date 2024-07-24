@@ -37,3 +37,41 @@
     top: 40px !important;
     color: white;
 }
+
+@media (min-width: 1024px){
+    .vedio{
+        height:750px;
+    }
+}
+
+@media (min-width: 768px) {
+    .vedio{
+        height:750px;
+    }
+}
+@media (min-width: 640px) {
+    .vedio{
+        height:750px;
+    }
+}
+@media (max-width: 640px) {
+    .vedio{
+        height:550px;
+    }
+}
+.z-999{
+    z-index: 999;
+}
+
+#menu.active {
+    display: block;
+    height: auto !important;
+}
+.hidden-menu {
+    height: 0 !important;
+    overflow: hidden;
+    display: none !important;
+}
+.hidden-menu > div {
+    display: none !important;
+}

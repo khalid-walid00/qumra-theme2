@@ -1,19 +1,16 @@
-{%macro Swipper1(imgsUrl="")%}
-             <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        {# {%for item in imgsUrl%} #}
-                        <div class="swiper-slide flex justify-center cursor-pointer"><img src="{{imgsUrl}}"></div>
-                        <div class="swiper-slide flex justify-center cursor-pointer"><img src="{{imgsUrl}}"></div>
-                        <div class="swiper-slide flex justify-center cursor-pointer"><img src="{{imgsUrl}}"></div>
-                        <div class="swiper-slide flex justify-center cursor-pointer"><img src="{{imgsUrl}}"></div>
-                        <div class="swiper-slide flex justify-center cursor-pointer"><img src="{{imgsUrl}}"></div>
-                        <div class="swiper-slide flex justify-center cursor-pointer"><img src="{{imgsUrl}}"></div>
-                        <div class="swiper-slide flex justify-center cursor-pointer"><img src="{{imgsUrl}}"></div>
-                        {# {%endfor%} #}
-                    </div>
-                    <!-- <div class="swiper-pagination"></div> -->
+{% macro Swipper1(imgsUrl) %}
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            {% for item in imgsUrl %}
+                <div class="swiper-slide flex justify-center cursor-pointer">
+                    <img src="{{ item }}" alt="Image">
                 </div>
-{%endmacro%}
+            {% endfor %}
+        </div>
+        <!-- Uncomment if you want pagination -->
+        <!-- <div class="swiper-pagination"></div> -->
+    </div>
+{% endmacro %}
 
 {%macro Swipper2(imgsUrl="")%}
             <div class="swiper mySwiper3">

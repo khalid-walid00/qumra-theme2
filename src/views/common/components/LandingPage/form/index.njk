@@ -1,12 +1,12 @@
 {%macro input(placeholder,type="text")%}
-  <input placeholder="{{placeholder}}" type="{{type}}" class=" w-full outline-none py-2 px-1 rounded-md">
+  <input placeholder="{{placeholder}}" type="{{type}}" class=" w-full outline-none py-2 px-1 rounded-md text-black">
 {%endmacro%}
 
 {%macro inputPhone(placeholder,type="text")%}
-     <input id="phone" class="w-full py-2 rounded-md outline-none " type="tel">
+     <input id="phone" class="w-full py-2 rounded-md outline-none text-black flex justify-start" type="tel">
 {%endmacro%}
 
 {%macro textarea(placeholder,type="text",height="3")%}
     <textarea rows="{{height}}" placeholder="{{placeholder}}" type="{{type}}"
-                                        class=" w-full outline-none py-2 px-1 rounded-md"></textarea>
+                                        class=" w-full outline-none py-2 px-1 rounded-md text-black"></textarea>
 {%endmacro%}

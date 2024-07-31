@@ -12,10 +12,9 @@
                     </div>
                 </div>
 {%endmacro%}
-{%macro CardArticls(image="",text="",date="")%}
-                <div class="rounded-xl shadow-lg ">
-                    <img class="rounded-t-xl w-full h-60" src="{{image}}">
-                    <div class=" text-mainColor font-semibold text-lg h-24  p-4">{{text}}</div>
-                    <div class=" text-start text-gray-400 text-xs p-4">{{date}}</div>
-                </div>
-{%endmacro%}
+{% macro CardArticles(image="", text="", date="") %}
+    <div class="rounded-xl shadow-lg">
+        <img class="rounded-xl w-full " src="{{ image }}">
+
+    </div>
+{% endmacro %}

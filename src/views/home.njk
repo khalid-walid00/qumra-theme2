@@ -2,7 +2,7 @@
 {% from "common/components/product.njk" import product %}
 {% from "common/components/LandingPage/vedio/index.njk" import SectionVedio %}
 {% from "common/components/LandingPage/headers/index.njk" import Head,Description %}
-{% from "common/components/LandingPage/cards/index.njk" import CardAbout,CardArticls %}
+{% from "common/components/LandingPage/cards/index.njk" import CardAbout,CardArticles %}
 {% from "common/components/LandingPage/lists/index.njk" import ListItem %}
 {% from "common/components/LandingPage/swipper/index.njk" import Swipper1,Swipper2,Swipper3 %}
 {% from "common/components/LandingPage/map/index.njk" import MapDetails %}
@@ -25,7 +25,7 @@ btnText="احصل على استشارة مجانية",imgUrl="images/GOOGLE-REVI
  {# <code dir="ltr" >{{ app|dump(2) }}</code> #}
  {# {{app.fileName}} #}
  
-               {{Head(text="توسع بأعمالك في السعودية مع خدمات التأسيس المثالية من بيزنس لينك حقق الريادة في المملكة مع خبرة الشريك الأكثر ثقة")}}
+               {{Head(text="المستشار للاستشارات وريادة الاعمال وتأسيس الشركات")}}
 
                {{Description(text="تتقدم بيزنس لينك خدمات استشارية احترافية لتمكينك داخل المملكة من خلال تأسيس شركة مملوكة بالكامل تحظى
                     بالعديد من المزايا الاستثمارية، مع الالتزام باللوائح الحكومية ومتطلبات هيئة الاستثمار. نلتزم بتقديم
@@ -49,13 +49,7 @@ btnText="احصل على استشارة مجانية",imgUrl="images/GOOGLE-REVI
              المالية لكل شريك فيها، ولا يكون الشريك فيها مسؤولاً عن الديون والالتزامات إلا بقدر حصته في رأس المال",secoundText="خبراء بيزنس لينك على دراية بكافة الأنظمة ولوائح تأسيس الشركات في السعودية. فريقنا
               مؤهل للقيام بكافة إجراءات التأسيس وخدمات إدارة الشؤون القانونية للشركة.")}}
          
-          {{CardAbout(title="تأسيس شركة ذات مسؤولية محدودة في السعودية",
-             firstText="هي الشكل الأكثر شيوعا للدخول في مشاريع مشتركة مع شركاء سعوديين، يؤسسها شخص واحد أو أكثر.وتعد ذمتها مستقلة عن الذمة 
-             المالية لكل شريك فيها، ولا يكون الشريك فيها مسؤولاً عن الديون والالتزامات إلا بقدر حصته في رأس المال")}}
-       
-          {{CardAbout(title="تأسيس شركة ذات مسؤولية محدودة في السعودية",
-             firstText="هي الشكل الأكثر شيوعا للدخول في مشاريع مشتركة مع شركاء سعوديين، يؤسسها شخص واحد أو أكثر.وتعد ذمتها مستقلة عن الذمة 
-             المالية لكل شريك فيها، ولا يكون الشريك فيها مسؤولاً عن الديون والالتزامات إلا بقدر حصته في رأس المال")}}
+         
           
           
           
@@ -76,23 +70,19 @@ btnText="احصل على استشارة مجانية",imgUrl="images/GOOGLE-REVI
                  class=" text-secoundColor"
                  )}}
             </div>
-            <div class=" grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6 w-11/12 text-secoundColor mt-8">
+            <div class=" grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-6 w-11/12 text-secoundColor mt-8">
                 <ul>
-                    {%for item in [1,2,3,4,5]%}
-                   {{ListItem(text="خدمات تسجيل العلامات التجارية")}}
+                    {%for item in ["خدمات تسجيل العلامات التجارية","رخصة الأستثمار","سجل تجاري","عقد التأسيس","ترخيص خدمي"]%}
+                   {{ListItem(text=item)}}
                     {%endfor%}
                 
                 </ul>
                 <ul>
-                  {%for item in [1,2,3,4,5]%}
-                   {{ListItem(text="خدمات تسجيل العلامات التجارية")}}
+                  {%for item in ["اشتراك في جميع المنصات الحكومية ","تأشيرة المدير العام ","فتح حساب بنكي","ترخيص زراعي","ترخيص صناعي"]%}
+                   {{ListItem(text=item)}}
                     {%endfor%}
                 </ul>
-                <ul>
-                       {%for item in [1,2,3,4,5]%}
-                   {{ListItem(text="خدمات تسجيل العلامات التجارية")}}
-                    {%endfor%}
-                </ul>
+    
             </div>
         </div>
         <!-- التعقيب  -->
@@ -108,7 +98,7 @@ btnText="احصل على استشارة مجانية",imgUrl="images/GOOGLE-REVI
                  </div>
             <div class="w-9/12 mt-8">
                 <!-- Swiper -->
-               {{Swipper1(imgsUrl="/images/prand1.png")}}
+              {{ Swipper1(["/images/clientimg1.jpg", "/images/clientimg2.jpg", "/images/clientimg3.jpg", "/images/clientimg4.jpg", "/images/clientimg5.jpg"]) }}
                 <!-- Swiper -->
 
             </div>
@@ -126,35 +116,39 @@ btnText="احصل على استشارة مجانية",imgUrl="images/GOOGLE-REVI
                             <div class=" font-bold lg:text-3xl text-2xl w-full text-center mb-9 mt-4">احصل على استشارة مجانية</div>
                             <form>
                                 <div class="flex justify-between gap-4">
-                                    <input placeholder="الاسم" type="text"
-                                        class=" w-full outline-none py-2 px-1 rounded-md">
-                                    <input placeholder="الاسم" type="text"
-                                        class=" w-full outline-none py-2 px-1 rounded-md">
+                              {{input(placeholder="الاسم")}}
                                 </div>
                                 <div class="my-8">
-                                  {{input(placeholder="الاسم")}}
+                              {{input(placeholder="رقم التليفون")}}
                                 </div>
-                                <div class="flex justify-end  w-full text-black z-50 bg-white rounded-md">
-                                    {{inputPhone()}}
-                                </div>
+                        
                                 <div class="mt-8">
-                                 {{textarea(placeholder="الاسم")}}
+                              {{input(placeholder="المدينة المقام فيها ")}}
+
+
+                                </div>
+                                 <div class="mt-8">
+                              {{input(placeholder="الجنسية")}}
+
+
+                                </div>
+                                 <div class="mt-8">
+                              {{input(placeholder="نوع النشاط")}}
+
+
                                 </div>
                                 <div class=" my-16">
                                     <button class=" w-full py-2 bg-red-600 rounded-lg">التقديم</button>
                                 </div>
                             </form>
                         </div>
-                        <div class=" z-40 lg:w-5/12 flex items-center" style="height: 24rem;">
+                        <div class=" z-40 hidden lg:block  lg:w-5/12 flex items-center" style="height: 24rem;">
                             <!-- form -->
 
 
                             <!-- Swiper -->
 
-                            {{Swipper3(name="حبيبه",date="27 January 2023",rating='6',text="را للآنسة ملك على حسن المعاملة والاستماع وعلى دقتك
-في توصيل المعلومات كنتي في المستوى وكل توفيق ل")}}
-
-                            <!-- Swiper JS -->
+                           
 
 
                         </div>
@@ -179,12 +173,21 @@ btnText="احصل على استشارة مجانية",imgUrl="images/GOOGLE-REVI
         </div>
         <!-- our team in environment -->
 
-         {{Head(text="أحدث المدونات")}}
+         {{Head(text="بعض عملائنا")}}
         <div class=" lg:w-9/12 w-11/12">
             <div class="  mt-8 grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-4">
-             {%for item in [1,2,3]%}
-                {{CardArticls(image="/images/card1.webp",text="فتح شركة تأجير سيارات في السعودية: دليل المستثمر",date="يونيو 28, 2024")}}
-                {%endfor%}
+           {% set articles = [
+    {image: "images/cardn1.jpg", text: "فتح شركة تأجير سيارات في السعودية: دليل المستثمر", date: "يونيو 28, 2024"},
+    {image: "images/cardn2.jpg", text:  "فتح شركة تأجير سيارات في السعودية: دليل المستثمر", date: "يوليو 15, 2024"},
+    {image: "images/cardn3.jpg", text:  "فتح شركة تأجير سيارات في السعودية: دليل المستثمر", date: "أغسطس 1, 2024"},
+    {image: "images/cardn4.jpg", text:  "فتح شركة تأجير سيارات في السعودية: دليل المستثمر", date: "أغسطس 1, 2024"},
+    {image: "images/cardn5.jpg", text:  "فتح شركة تأجير سيارات في السعودية: دليل المستثمر", date: "أغسطس 1, 2024"},
+    {image: "images/cardn6.jpg", text:  "فتح شركة تأجير سيارات في السعودية: دليل المستثمر", date: "أغسطس 1, 2024"}
+] %}
+
+{% for item in articles %}
+    {{ CardArticles(image=item.image, text=item.text, date=item.date) }}
+{% endfor %}
             </div>
 
             <div class=" text-mainColor my-20 flex justify-center">
@@ -195,12 +198,10 @@ btnText="احصل على استشارة مجانية",imgUrl="images/GOOGLE-REVI
         </div>
 
         <div class=" lg:w-9/12 w-11/12">
-            <div class="flex lg:flex-row md:flex-row flex-col justify-between gap-10">
+            <div class="flex  justify-center gap-10">
+               
                 <div class="lg:w-1/2 w-full">
-                   {{MapDetails(title="بيزنس لينك (فرع المملكة العربية السعودية)",src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6825.608684709208!2d29.92428191328253!3d31.198437951209733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m3!3e6!4m0!4m0!5e0!3m2!1sar!2seg!4v1721815081792!5m2!1sar!2seg")}}
-                </div>
-                <div class="lg:w-1/2 w-full">
-                 {{MapDetails(title="بيزنس لينك (فرع المملكة العربية السعودية)",src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6825.608684709208!2d29.92428191328253!3d31.198437951209733!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m3!3e6!4m0!4m0!5e0!3m2!1sar!2seg!4v1721815081792!5m2!1sar!2seg")}}
+                 {{MapDetails(title="الرياض - طريق الملك فهد جنوب - حي الوشم - مركز الجفال التجاري - الدور ٣-مكتب ٢١ ",src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3627.2800948994313!2d46.70948310642849!3d24.614029358763283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f057820bfe37b%3A0x3c010e6507acd828!2z2YXYsdmD2LIg2KfZhNis2YHYp9mEINin2YTYqtis2KfYsdmK!5e0!3m2!1sar!2seg!4v1722449947208!5m2!1sar!2seg")}}
                 </div>
             </div>
         </div>

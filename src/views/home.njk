@@ -7,9 +7,11 @@
 {% from "common/components/LandingPage/swipper/index.njk" import Swipper1,Swipper2,Swipper3 %}
 {% from "common/components/LandingPage/map/index.njk" import MapDetails %}
 {% from "common/components/LandingPage/form/index.njk" import textarea,inputPhone,input %}
+{% from "common/components/LandingPage/fixed/index..njk" import WhatsApp %}
 {# {{ app|dump }} #}
 {% block title %}متجرك - {{ page.title }} {% endblock %}
 {% block content %}
+
     <!-- vedio -->
 {{SectionVedio(vedioUrl="/images/saudi arabia.mp4",doc="نفخر بفريق بيزنس لينك الخبير والمؤهل للتعامل مع اجراءات تأسيس الشركات
 في السعودية. نحن نقدم لك ليس فقط استشارات متخصصة بل ودعمًا شاملاً
@@ -22,10 +24,9 @@ btnText="احصل على استشارة مجانية",imgUrl="images/GOOGLE-REVI
         <div class="lg:w-9/12 md:w-10/12 sm:w-11/12 w-full">
             <!-- small about -->
             <div class="flex flex-col items-center justify-center mt-16">
- {# <code dir="ltr" >{{ app|dump(2) }}</code> #}
+  {#<code dir="ltr" class="w-20">{{ app|dump(2) }}</code> #}
  {# {{app.fileName}} #}
- 
-               {{Head(text="المستشار للاستشارات وريادة الاعمال وتأسيس الشركات")}}
+               {{Head(text=app.description)}}
 
                {{Description(text="تتقدم بيزنس لينك خدمات استشارية احترافية لتمكينك داخل المملكة من خلال تأسيس شركة مملوكة بالكامل تحظى
                     بالعديد من المزايا الاستثمارية، مع الالتزام باللوائح الحكومية ومتطلبات هيئة الاستثمار. نلتزم بتقديم
@@ -114,8 +115,8 @@ btnText="احصل على استشارة مجانية",imgUrl="images/GOOGLE-REVI
 
                         <div class=" lg:relative bg-black z-50 lg:w-2/5 -top-28 px-4 py-6 text-white">
                             <div class=" font-bold lg:text-3xl text-2xl w-full text-center mb-9 mt-4">احصل على استشارة مجانية</div>
-                            <form>
-                                <div class="flex justify-between gap-4">
+                            <form >
+                                <div class="flex justify-between gap-4" id="form-section">
                               {{input(placeholder="الاسم")}}
                                 </div>
                                 <div class="my-8">
@@ -208,6 +209,30 @@ btnText="احصل على استشارة مجانية",imgUrl="images/GOOGLE-REVI
 
     </div>
     <!-- content -->
+{{ WhatsApp(link="https://wa.me/966547794986") }}
+<script>
+const handleMenuClick = () => {
+  const element = document.getElementById("form-section");
+  if (element) {
+    const windowWidth = window.innerWidth;
+    
+    // Define offset values for different screen sizes
+    let offset;
+    if (windowWidth > 1200) {
+      offset = 2500; // Large screens
+    } else if (windowWidth > 768) {
+      offset = 2400; // Medium screens (for example, screens between 769px and 1200px)
+    } else {
+      offset = 3000; // Small screens (or anything below 769px)
+    }
+    
+    window.scrollTo({
+      top: offset,
+      behavior: "smooth"
+    });
+  }
+};
 
+  </script>
 {% endblock %}
 

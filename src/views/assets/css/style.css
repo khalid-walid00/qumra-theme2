@@ -87,3 +87,9 @@
     background-image: linear-gradient(250deg,#0289af,#006ac6) ;
     
 }
+.bg-form-bg{
+background-color: hsla(208, 100%, 32%, 0.626);
+}
+.form-bg{
+    background-color: #f7c200;
+}
